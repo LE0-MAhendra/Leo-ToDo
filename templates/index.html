@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content%}
+<div class="main">
+
+    <div class="title">
+        <h1>ToDo</h1>
+    </div>
+    <div class="desc">
+        <p>Welcome to ToDo app</p>
+
+    </div>
+    <div class="btns">
+        <a href="{{ url_for('signup') }}">SignUp</a>
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+</div>
+{% endblock %}
+
+
+
+{% block jscript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+    integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html'%}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+{% block content%}
+<div class="container">
+    <div class="nav">
+        <div class="left">
+            <h1 class="main-title">TODO 📜</h1>
+        </div>
+        <div class="right">
+            <h2>{{name}}</h2>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+</div>
+<div class="mytodo">
+    <div class="todo-title">
+        <h2>Add a ToDo</h2>
+    </div>
+    <div class="addtodos">
+        <form action="/add" class="form" method="POST">
+            <textarea class="form_input" name="title" id="title" rows="1" placeholder="Add a title"></textarea>
+            <textarea class="form_input" name="description" id="description" rows="3"
+                placeholder="Add a new daily habit"></textarea>
+            <button class="form_button" type="submit"> Add</button>
+        </form>
+    </div>
+    <div class="todo-data">
+        <h1>My data here👇</h1>
+        <table>
+            <tr>
+                <th>Status</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Created at</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {% for data in items %}
+            <tr>
+                <td><input type="checkbox" id="status" name="status" value="true" {% if data[4]==0 %}checked{% endif %}>
+                </td>
+                <td>{{data[1]}}</td>
+                <td>{{data[3][:20]}}</td>
+                <td>{{data[2]}}</td>
+                <td><a href="/update/{{data[0]}}">Update</a></td>
+                <td><a href="/delete/{{data[0]}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}

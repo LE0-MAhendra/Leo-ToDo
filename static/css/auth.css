@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.mess {
+    color: red;
+    font-weight: bold;
+}
+
+.container {
+    margin: 12% 20px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: whitesmoke;
+    opacity: .8;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.titles {
+    margin: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.form-class {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-class input {
+    width: 80%;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 1.3rem;
+    border-radius: 15px;
+}
+
+input[type="submit"] {
+    color: rgb(251, 75, 12);
+    background-color: aquamarine;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.options a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.text {
+    pointer-events: none;
+    color: brown;
+}
+
+.btn {
+    background-color: #0C134F;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width:700px) and (max-width:1000px) {
+    .container {
+        margin: 25% auto;
+    }
+}
+
+@media (min-width:480px) and (max-width:700px) {
+    .container {
+        margin: 28% auto;
+    }
+}
+
+@media (min-width:340px) and (max-width:480px) {
+    .container {
+        margin-top: 50%;
+        background: none;
+    }
+}
+
+@media (min-width:260px) and (max-width:340px) {
+    .container {
+        margin-top: 50%;
+        background: none;
+    }
+
+    .form-class input {
+        width: 100%;
+    }
+
+    .options a {
+        font-size: 1rem;
+    }
+}

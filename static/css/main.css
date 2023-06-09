@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    color: white;
+}
+
+.nav {
+    position: relative;
+    margin: auto 30px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 50px;
+    color: red;
+}
+
+.right {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right h2 {
+    margin: auto 30px;
+    text-transform: uppercase;
+}
+
+.right a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: aqua;
+}
+
+.mytodo {
+    position: absolute;
+    width: 95%;
+    top: 25%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-title {
+    font-size: 1.5rem;
+    margin: 20px auto;
+}
+
+.addtodos {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_input {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.3rem;
+    line-height: 20px;
+    resize: none;
+    background: transparent;
+    outline: none;
+    color: white;
+    border: 5px solid white;
+    border-radius: 15px;
+}
+
+.form_input:focus {
+    border: 5px solid red;
+}
+
+.form_button {
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 1.3rem;
+    background-color: aqua;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.todo-data {
+    min-width: 90%;
+    max-width: 95%;
+    font-size: 2rem;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+table,
+td,
+th {
+    padding: .6rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+td input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 25px;
+    width: 25px;
+}
+
+td a {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
