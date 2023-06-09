@@ -3,6 +3,7 @@ click
 colorama
 Flask
 greenlet
+gunicorn
 itsdangerous
 Jinja2
 MarkupSafe
